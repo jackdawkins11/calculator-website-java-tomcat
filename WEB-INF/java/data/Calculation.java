@@ -64,7 +64,7 @@ public class Calculation {
 
     //Get the JSON needed for the UI
     public String toJSON() throws Exception {
-        DBInterface dao = new SQLDAO();
+        DBInterface dao = DBInterface.getDAO();
         String username = dao.getUsernameById(userId);
         return String.format(
             "{ Username: \"%s\","

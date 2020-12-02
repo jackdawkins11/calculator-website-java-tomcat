@@ -28,4 +28,9 @@ public interface DBInterface {
 
     //Gets up to the last 10 calculations in the database
     ArrayList< Calculation > getLast10Calculations() throws Exception;
+
+    //Returns an implementation of this interface
+    public static DBInterface getDAO(){
+        return new SQLDAO();
+    }
 }

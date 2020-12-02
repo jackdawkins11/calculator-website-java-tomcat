@@ -2,13 +2,14 @@
 import java.util.ArrayList;
 import java.time.LocalDateTime;
 
-import data.*;
+import data.DBInterface;
+import data.Calculation;
 
 public class TestDBInterface {
    
     public static void main(String args[]){
 
-        DBInterface dao = new SQLDAO();
+        DBInterface dao = DBInterface.getDAO();
 
         try{
             System.out.println(
