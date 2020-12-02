@@ -8,6 +8,16 @@
     <servlet-mapping>  
     <servlet-name>jackservlet</servlet-name>  
     <url-pattern>/jackserv</url-pattern>  
-    </servlet-mapping> 
+    </servlet-mapping>
+    
+    <servlet>  
+        <servlet-name>createservlet</servlet-name>  
+        <servlet-class>servlets.CreateAccountServlet</servlet-class>  
+    </servlet>
+          
+    <servlet-mapping>  
+        <servlet-name>createservlet</servlet-name>  
+        <url-pattern>/CreateAccount</url-pattern>  
+    </servlet-mapping>
 
 </web-app>  

@@ -14,7 +14,7 @@ public class ValidationResult {
         return valid;
     }
 
-    public boolean getMessage(){
+    public String getMessage(){
         return message;
     }
 }
