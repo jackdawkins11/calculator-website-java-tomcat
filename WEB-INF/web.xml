@@ -20,4 +20,14 @@
         <url-pattern>/CreateAccount</url-pattern>  
     </servlet-mapping>
 
+    <servlet>  
+        <servlet-name>startsessionservlet</servlet-name>  
+        <servlet-class>servlets.StartSessionServlet</servlet-class>  
+    </servlet>
+          
+    <servlet-mapping>
+        <servlet-name>startsessionservlet</servlet-name>  
+        <url-pattern>/StartSession</url-pattern>
+    </servlet-mapping>
+
 </web-app>  
