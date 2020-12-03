@@ -62,6 +62,7 @@ public class CreateAccountServlet extends HttpServlet {
             return;
         }
 
+        //Insert the user
         DBInterface dao = DBInterface.getDAO();
         try{
             dao.insertUser(username, password);
@@ -69,6 +70,7 @@ public class CreateAccountServlet extends HttpServlet {
             throw new ServletException(e.getLocalizedMessage());
         }
 
+        //Return success
         res.setContentType("application/json");
         pw.write(
             "{ \"error\": false, \"createdAccount\": true, \"message\": \"\"}"

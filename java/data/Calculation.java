@@ -5,6 +5,10 @@ import java.time.format.DateTimeFormatter;
 
 import data.DBInterface;
 
+/*
+    Represents a row in the calculations table.
+*/
+
 public class Calculation {
     
     private int userId;

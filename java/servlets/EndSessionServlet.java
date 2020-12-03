@@ -10,6 +10,10 @@ import java.io.IOException;
 
 public class EndSessionServlet extends HttpServlet {
     
+    /*
+        Handles the POST requests to /EndSession. Ends any session with
+        the client and returns.
+    */
     public void doPost(HttpServletRequest req, HttpServletResponse res )
         throws IOException, ServletException {
         
