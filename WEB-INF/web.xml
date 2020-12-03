@@ -30,4 +30,14 @@
         <url-pattern>/StartSession</url-pattern>
     </servlet-mapping>
 
+    <servlet>  
+        <servlet-name>checksessionservlet</servlet-name>  
+        <servlet-class>servlets.CheckSessionServlet</servlet-class>  
+    </servlet>
+          
+    <servlet-mapping>
+        <servlet-name>checksessionservlet</servlet-name>  
+        <url-pattern>/CheckSession</url-pattern>
+    </servlet-mapping>
+
 </web-app>  
