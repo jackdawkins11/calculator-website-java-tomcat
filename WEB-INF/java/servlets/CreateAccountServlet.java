@@ -13,12 +13,25 @@ import util.userValidation.ValidationResult;
 
 public class CreateAccountServlet extends HttpServlet {
     
+    /*
+        Handles the POST request to /CreateAccount.
+        If the username and password given are valid, an account
+        is created. Returns:
+        {
+            error: (bool) whether there was an error,
+            createdAccount: (bool) whether an account was created,
+            message (string) Why an account was not created, if it was not
+        }
+    */
     public void doPost(HttpServletRequest req, HttpServletResponse res)
         throws ServletException, IOException {
 
         String username = req.getParameter("username");
         String password = req.getParameter("password");
-
+        
+        /*
+            Check if username and password were supplied
+        */
         if( username == null || password == null){
             res.sendError(400, "Must include username and password params.");
             return;
@@ -26,6 +39,9 @@ public class CreateAccountServlet extends HttpServlet {
 
         PrintWriter pw = res.getWriter();       
 
+        /*
+            Check if they are valid
+        */
         ValidationResult valid = null;
         
         try{
@@ -35,14 +51,25 @@ public class CreateAccountServlet extends HttpServlet {
             return;
         }
         
+        //return the problem if they are invalid
         if( !valid.getValid() ){
             pw.write(
                 "{ error: false, \n"
-                + "createAccount: false, \n"
+                + "createdAccount: false, \n"
                 + "message: \"" + valid.getMessage() + "\"}"
             );
             return;
         }
 
+        DBInterface dao = DBInterface.getDAO();
+        try{
+            dao.insertUser(username, password);
+        }catch(Exception e){
+            throw new ServletException(e.getLocalizedMessage());
+        }
+
+        pw.write(
+            "{ error: false, createdAccount: true, message: \"\"}"
+        );
     }
 }

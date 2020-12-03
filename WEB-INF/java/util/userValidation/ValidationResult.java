@@ -1,5 +1,9 @@
 package util.userValidation;
 
+/*
+    Simple class that is used to return data
+    from UserValidator.Validate()
+*/
 public class ValidationResult {
 
     private boolean valid;

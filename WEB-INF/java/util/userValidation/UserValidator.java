@@ -7,6 +7,12 @@ import java.util.regex.Matcher;
 
 public class UserValidator {
     
+    /*
+        Checks if a username and password can be used to
+        create a new account. The username must be at
+        least 5 characters and not be taken. The password
+        must be strong
+    */
     public static ValidationResult validate(String username, String password) throws Exception {
         if( username.length() < 5 ){
             return new ValidationResult(false, "Username needs at least 5 characters");
