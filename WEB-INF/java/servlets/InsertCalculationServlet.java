@@ -8,16 +8,14 @@ import javax.servlet.ServletException;
 import java.io.PrintWriter;
 import java.io.IOException;
 
-public class EndSessionServlet extends HttpServlet {
+import data.DBInterface;
+
+
+public class InsertCalculationServlet extends HttpServlet {
     
     public void doPost(HttpServletRequest req, HttpServletResponse res )
         throws IOException, ServletException {
         
-        req.getSession().invalidate();
-
-        res.setContentType("application/json");
-        res.getWriter().write(
-            "{ \"error\": false }"
-        );
+        
     }
 }

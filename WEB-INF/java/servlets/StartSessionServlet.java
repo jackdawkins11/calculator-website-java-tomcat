@@ -61,7 +61,8 @@ public class StartSessionServlet extends HttpServlet {
         //Return whether a session was created
         PrintWriter pw = res.getWriter();
         
-        pw.write("{ error: false, hasSession: " + String.valueOf(authorized) + " }" );
+        res.setContentType("application/json");
+        pw.write("{ \"error\": false, \"hasSession\": " + String.valueOf(authorized) + " }" );
 
     }
 }

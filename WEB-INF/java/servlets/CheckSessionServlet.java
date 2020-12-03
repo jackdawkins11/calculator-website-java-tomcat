@@ -26,8 +26,9 @@ public class CheckSessionServlet extends HttpServlet {
         PrintWriter pw = res.getWriter();
 
         //Write response as json
+        res.setContentType("application/json");
         pw.write(
-            "{ error: false, hasSession: " + String.valueOf(hasSession) + " }"
+            "{ \"error\": false, \"hasSession\": " + String.valueOf(hasSession) + " }"
         );
     }
     

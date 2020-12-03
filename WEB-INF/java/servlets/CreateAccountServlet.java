@@ -53,10 +53,11 @@ public class CreateAccountServlet extends HttpServlet {
         
         //return the problem if they are invalid
         if( !valid.getValid() ){
+            res.setContentType("application/json");
             pw.write(
-                "{ error: false, \n"
-                + "createdAccount: false, \n"
-                + "message: \"" + valid.getMessage() + "\"}"
+                "{ \"error\": false, \n"
+                + "\"createdAccount\": false, \n"
+                + "\"message\": \"" + valid.getMessage() + "\"}"
             );
             return;
         }
@@ -68,8 +69,9 @@ public class CreateAccountServlet extends HttpServlet {
             throw new ServletException(e.getLocalizedMessage());
         }
 
+        res.setContentType("application/json");
         pw.write(
-            "{ error: false, createdAccount: true, message: \"\"}"
+            "{ \"error\": false, \"createdAccount\": true, \"message\": \"\"}"
         );
     }
 }
