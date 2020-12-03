@@ -1,14 +1,4 @@
 <web-app>  
-  
-    <servlet>  
-    <servlet-name>jackservlet</servlet-name>  
-    <servlet-class>HelloServlet</servlet-class>  
-    </servlet>  
-      
-    <servlet-mapping>  
-    <servlet-name>jackservlet</servlet-name>  
-    <url-pattern>/jackserv</url-pattern>  
-    </servlet-mapping>
     
     <servlet>  
         <servlet-name>createservlet</servlet-name>  
