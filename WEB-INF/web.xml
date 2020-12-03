@@ -40,4 +40,14 @@
         <url-pattern>/CheckSession</url-pattern>
     </servlet-mapping>
 
+    <servlet>  
+        <servlet-name>endsessionservlet</servlet-name>  
+        <servlet-class>servlets.EndSessionServlet</servlet-class>  
+    </servlet>
+          
+    <servlet-mapping>
+        <servlet-name>endsessionservlet</servlet-name>  
+        <url-pattern>/EndSession</url-pattern>
+    </servlet-mapping>
+
 </web-app>  
