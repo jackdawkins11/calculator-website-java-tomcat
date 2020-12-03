@@ -50,4 +50,24 @@
         <url-pattern>/EndSession</url-pattern>
     </servlet-mapping>
 
+    <servlet>  
+        <servlet-name>insertcalculationservlet</servlet-name>  
+        <servlet-class>servlets.InsertCalculationServlet</servlet-class>  
+    </servlet>
+          
+    <servlet-mapping>
+        <servlet-name>insertcalculationservlet</servlet-name>  
+        <url-pattern>/AddCalculation</url-pattern>
+    </servlet-mapping>
+
+    <servlet>  
+        <servlet-name>getcalculationsservlet</servlet-name>  
+        <servlet-class>servlets.GetCalculationsServlet</servlet-class>  
+    </servlet>
+          
+    <servlet-mapping>
+        <servlet-name>getcalculationsservlet</servlet-name>  
+        <url-pattern>/GetLast10Calculations</url-pattern>
+    </servlet-mapping>
+
 </web-app>  

@@ -67,12 +67,12 @@ public class Calculation {
         DBInterface dao = DBInterface.getDAO();
         String username = dao.getUsernameById(userId);
         return String.format(
-            "{ Username: \"%s\","
-            + " X: \"%f\","
-            + " Op: \"%s\","
-            + " Y: \"%f\","
-            + " Val: \"%f\","
-            + " Date: \"%s\" }",
+            "{ \"Username\": \"%s\","
+            + " \"X\": %f,"
+            + " \"Op\": \"%s\","
+            + " \"Y\": %f,"
+            + " \"Val\": %f,"
+            + " \"Date\": \"%s\" }",
             username, x, op, y, val, getDateString());
     }
 }
